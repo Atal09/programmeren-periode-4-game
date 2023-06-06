@@ -1,13 +1,19 @@
 import { ImageSource, Sound, Resource, Loader } from "excalibur";
-import fishImage from "../images/fish.png";
-import SansImage from "../images/Sans.png";
-import BackgroundImage from "../images/background.png";
+import playerImage from "../images/player.png";
+import backgroundImage from "../images/background.png";
+import enemyImage from "../images/enemy.png";
 
 const Resources = {
-  Fish: new ImageSource(fishImage),
-  Sans: new ImageSource(SansImage),
-  Background: new ImageSource(BackgroundImage) 
+  Player: new ImageSource(playerImage),
+  Background: new ImageSource(backgroundImage),
+  Enemy: new ImageSource(enemyImage),
 };
-const ResourceLoader = new Loader([Resources.Fish, Resources.Sans, Resources.Background]);
+
+const resourceArray = []
+for (const key in Resources) {
+    resourceArray.push(Resources[key])
+}
+const ResourceLoader = new Loader(resourceArray)
+
 
 export { Resources, ResourceLoader };
