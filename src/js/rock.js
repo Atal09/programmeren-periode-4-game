@@ -16,7 +16,7 @@ export class Rock extends Actor {
   onInitialize(engine) {
 
     this.graphics.use(Resources.Rock.toSprite());
-    this.pos = new Vector(900, 460);
+    this.pos = new Vector(900, 60);
     this.scale = new Vector(0.5, 0.5);
     this.vel = new Vector(-250, 0);
     this.body.useGravity = false;

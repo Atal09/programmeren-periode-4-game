@@ -69,13 +69,6 @@ export class Player extends Actor {
 
 
 
-  takeDamage() {
-    this.health--;
-    if (this.health <= 0) {
-      // Speler is uitgeschakeld, voer hier de logica uit om het spel te beëindigen
-      resetScore();
-      // Voer andere benodigde acties uit, zoals het tonen van een game over scherm of het resetten van de scene.
-    }
-  }
+  
 
 }

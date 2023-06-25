@@ -17,7 +17,7 @@ export class Game extends Engine{
 
         Physics.useArcadePhysics();
         Physics.gravity = new Vector(0, 900);
-        this.showDebug(true);
+        
     }
 
     startGame(){
