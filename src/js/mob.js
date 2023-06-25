@@ -1,24 +1,41 @@
-import { Actor, CollisionType } from 'excalibur';
+import { Actor, CollisionType,Input, SpriteSheet, Vector, range, Animation } from "excalibur";
 import { Resources } from './resources';
-import { Runner } from './player';
+import { Player } from './player';
 
-export class Mob extends Actor {
+
+
+export class Enemy extends Actor{
   constructor() {
     super({
-      width: 10,
-      height: 10,
-      sprite: Resources.Enemy,
-      collisionType: CollisionType.Active
+      width: Resources.Enemy.width/2 ,
+      height: Resources.Enemy.height/2,
+      
+      
     });
+    
+      
+      }
+  onInitialize(engine) {            
+    this.body.collisionType = CollisionType.Active
+    this.graphics.use(Resources.Enemy.toSprite())
+    this.pos = new Vector(900,460)
+    
+    this.vel = new Vector(-250,0)            
+    this.body.useGravity = false;  
+
   }
 
-  onInitialize() {
-    this.on('precollision', this.handleCollision);
-  }
+     
+ 
+  
 
-  handleCollision(event) {
-    if (event.other instanceof Runner) {
-      event.other.takeDamage();
-    }
-  }
 }
+
+
+
+
+
+
+  
+
+
