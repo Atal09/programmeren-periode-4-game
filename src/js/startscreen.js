@@ -9,7 +9,7 @@ export class StartScreen extends Scene {
     }
 
     onInitialize(engine) {
-        console.log('jhghkj');
+        
         let startButton = new Actor({
             pos: new Vector(engine.screen.drawWidth / 2, engine.screen.drawHeight / 2),
             width: Resources.StartButton.width,

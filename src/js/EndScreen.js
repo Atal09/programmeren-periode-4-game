@@ -8,7 +8,7 @@ export class EndScreen extends Scene {
   }
 
   onInitialize(engine) {
-      console.log('jhghkj')
+
       let gameover = new Actor({
           pos: new Vector(engine.screen.drawWidth / 2, engine.screen.drawHeight / 2),
           width: Resources.GameOver.width,

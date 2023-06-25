@@ -49,11 +49,6 @@ export class Level extends Scene {
             
 }
 
-    onPreUpdate(engine){
-
-        
-    }
-
 
 
 
